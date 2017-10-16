@@ -32,5 +32,4 @@ let engineKit = FYRtcEngineKit.sharedEngine(withAppId: "59DD**********E58A", app
 //创建并加入频道
 engineKit.joinChannel("channelId", uid: nil, optionData: nil, joinSuccess: nil)
 ```
-现在可以一对一或者一对多进行语音聊天了, uid: nil, optionData: nil, joinSuccess: nil)
-现在可以一对一或者一对多进行语音聊天了
+现在可以一对一或者一对多进行语音聊天了！
