@@ -11,8 +11,7 @@ iOS集成指南
 
 
 #### 2. 支持FYRtcEngineKit需要的framework
-![](/assets/61A99AB8-B74C-42FF-AE44-76C2D8E54CCC.png)
-
+![github](https://github.com/FeiyuCloud/objc-sdk-demo/blob/master/img/fycloud-ios.png "github")
 #### 3. 初始化 FYRtcEngineKit
 
 代码示例如下：
