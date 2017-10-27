@@ -40,18 +40,18 @@ typedef NS_ENUM(NSInteger, FYRtcErrorCode) {
 @end
 
 @interface FYOptionData :NSObject
-@property (nonatomic, assign)   BOOL isRecord;
-@property (nonatomic, assign)   int maxDuration;
-@property (nonatomic, assign)   NSString *extraData;
+@property (nonatomic, assign)   BOOL isRecord;  //enable record function
+@property (nonatomic, assign)   int maxDuration; //maximum number of minutes
+@property (nonatomic, assign)   NSString *extraData; //transparent data
 @end
 
 @interface FYRtcEngineStatus :NSObject
-@property (nonatomic ,assign) float downBandwidth;
-@property (nonatomic ,assign) float upBandwidth;
-@property (nonatomic ,assign) float sendLossRate;
-@property (nonatomic ,assign) float recvLossRate;
-@property (nonatomic ,assign) float sendBytes;
-@property (nonatomic ,assign) float recvBytes;
+@property (nonatomic ,assign) float downBandwidth; //down bandwidth
+@property (nonatomic ,assign) float upBandwidth;   //up bandwidth
+@property (nonatomic ,assign) float sendLossRate;  //send loss rate
+@property (nonatomic ,assign) float recvLossRate;  //receive loss rate
+@property (nonatomic ,assign) float sendBytes;     //send bytes
+@property (nonatomic ,assign) float recvBytes;     //receive bytes
 
 @end
 
@@ -218,7 +218,7 @@ typedef NS_ENUM(NSInteger, FYRtcErrorCode) {
  * @param calleeNumber    callee's phone number. the format is PSTN E164. eg. Chinese number: +86136********
  *
  * @param uid             Optional, this argument is the unique ID for caller in a call.
-                          If not specified, set to nil, the SDK automatically allocates an ID, and the id could be gotten in outgoingCall or callConnect event.
+ If not specified, set to nil, the SDK automatically allocates an ID, and the id could be gotten in outgoingCall or callConnect event.
  *
  * @param display         display number. the format is PSTN E164. eg. Chinese number: +86136********
  *
@@ -228,12 +228,12 @@ typedef NS_ENUM(NSInteger, FYRtcErrorCode) {
 
 /**
  * Create an open UDP socket to the FYRtcEngineKit cloud service to call remote FYRtcEngineKit cloud client.
-   Users using different appId cannot call each other.
+ Users using different appId cannot call each other.
  *
  * @param calleeUid    callee's user id
  *
  * @param uid          Optional, this argument is the unique ID for caller in a call.
-                       If not specified, or set to nil, the SDK automatically allocates an ID, and the id could be gotten in outgoingCall or callConnect
+ If not specified, or set to nil, the SDK automatically allocates an ID, and the id could be gotten in outgoingCall or callConnect
  *
  * @param optionData      Add optional options (isRecord/maxDuration/extraData)
  */
@@ -292,7 +292,7 @@ typedef NS_ENUM(NSInteger, FYRtcErrorCode) {
 
 /**
  *  lets the user leave a channel, i.e., hanging up or exiting a call.
-    After joining a channel, the user must call the leaveChannel method to end the call before joining another one.
+ After joining a channel, the user must call the leaveChannel method to end the call before joining another one.
  *
  *  @param leaveChannelBlock  The statistics of the call, including duration, sent bytes and received bytes
  */

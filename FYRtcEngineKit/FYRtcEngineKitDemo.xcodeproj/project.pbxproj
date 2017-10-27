@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A3A361B1F99E7EE0072DEF7 /* buttonBG@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A3A361A1F99E7EE0072DEF7 /* buttonBG@2x.png */; };
+		0A3A36211F99F4620072DEF7 /* JoinChannelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3A36201F99F4620072DEF7 /* JoinChannelViewController.swift */; };
+		0A3A36231F99F4790072DEF7 /* DialPeerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3A36221F99F4790072DEF7 /* DialPeerViewController.swift */; };
+		0A3A36251F9A05F30072DEF7 /* AppID&AppToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3A36241F9A05F30072DEF7 /* AppID&AppToken.swift */; };
 		0A55D02C1F762D2A008646D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A55D02B1F762D2A008646D8 /* AppDelegate.swift */; };
 		0A55D02E1F762D2A008646D8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A55D02D1F762D2A008646D8 /* ViewController.swift */; };
 		0A55D0311F762D2A008646D8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A55D02F1F762D2A008646D8 /* Main.storyboard */; };
@@ -39,9 +43,14 @@
 		0A55D0891F76456F008646D8 /* mute_pre@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A55D0811F76456F008646D8 /* mute_pre@2x.png */; };
 		0A55D08A1F76456F008646D8 /* speaker_nor@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A55D0821F76456F008646D8 /* speaker_nor@2x.png */; };
 		0A55D08B1F76456F008646D8 /* speaker_pre@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A55D0831F76456F008646D8 /* speaker_pre@2x.png */; };
+		0ABE61051F9D970600DA6379 /* InCallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ABE61041F9D970600DA6379 /* InCallViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0A3A361A1F99E7EE0072DEF7 /* buttonBG@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "buttonBG@2x.png"; sourceTree = "<group>"; };
+		0A3A36201F99F4620072DEF7 /* JoinChannelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JoinChannelViewController.swift; sourceTree = "<group>"; };
+		0A3A36221F99F4790072DEF7 /* DialPeerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DialPeerViewController.swift; sourceTree = "<group>"; };
+		0A3A36241F9A05F30072DEF7 /* AppID&AppToken.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AppID&AppToken.swift"; sourceTree = "<group>"; };
 		0A55D0281F762D2A008646D8 /* FYRtcEngineKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FYRtcEngineKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A55D02B1F762D2A008646D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0A55D02D1F762D2A008646D8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -84,6 +93,7 @@
 		0A55D0811F76456F008646D8 /* mute_pre@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mute_pre@2x.png"; sourceTree = "<group>"; };
 		0A55D0821F76456F008646D8 /* speaker_nor@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "speaker_nor@2x.png"; sourceTree = "<group>"; };
 		0A55D0831F76456F008646D8 /* speaker_pre@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "speaker_pre@2x.png"; sourceTree = "<group>"; };
+		0ABE61041F9D970600DA6379 /* InCallViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InCallViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +150,10 @@
 				0A55D0401F762D88008646D8 /* FeiyuLib */,
 				0A55D02B1F762D2A008646D8 /* AppDelegate.swift */,
 				0A55D02D1F762D2A008646D8 /* ViewController.swift */,
+				0A3A36201F99F4620072DEF7 /* JoinChannelViewController.swift */,
+				0A3A36221F99F4790072DEF7 /* DialPeerViewController.swift */,
+				0ABE61041F9D970600DA6379 /* InCallViewController.swift */,
+				0A3A36241F9A05F30072DEF7 /* AppID&AppToken.swift */,
 				0A55D02F1F762D2A008646D8 /* Main.storyboard */,
 				0A55D0321F762D2A008646D8 /* Assets.xcassets */,
 				0A55D0341F762D2A008646D8 /* LaunchScreen.storyboard */,
@@ -192,6 +206,7 @@
 		0A55D07B1F764501008646D8 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				0A3A361A1F99E7EE0072DEF7 /* buttonBG@2x.png */,
 				0A55D07C1F76456F008646D8 /* answer_nor@2x.png */,
 				0A55D07D1F76456F008646D8 /* answer_pre@2x.png */,
 				0A55D07E1F76456F008646D8 /* hangup_nor@2x.png */,
@@ -274,6 +289,7 @@
 				0A55D0881F76456F008646D8 /* mute_nor@2x.png in Resources */,
 				0A55D0311F762D2A008646D8 /* Main.storyboard in Resources */,
 				0A55D0891F76456F008646D8 /* mute_pre@2x.png in Resources */,
+				0A3A361B1F99E7EE0072DEF7 /* buttonBG@2x.png in Resources */,
 				0A55D08A1F76456F008646D8 /* speaker_nor@2x.png in Resources */,
 				0A55D0851F76456F008646D8 /* answer_pre@2x.png in Resources */,
 			);
@@ -286,7 +302,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A3A36231F99F4790072DEF7 /* DialPeerViewController.swift in Sources */,
+				0ABE61051F9D970600DA6379 /* InCallViewController.swift in Sources */,
+				0A3A36211F99F4620072DEF7 /* JoinChannelViewController.swift in Sources */,
 				0A55D02E1F762D2A008646D8 /* ViewController.swift in Sources */,
+				0A3A36251F9A05F30072DEF7 /* AppID&AppToken.swift in Sources */,
 				0A55D02C1F762D2A008646D8 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -416,7 +436,7 @@
 				DEVELOPMENT_TEAM = G2URY8A8L9;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = FYRtcEngineKitDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -445,7 +465,7 @@
 				DEVELOPMENT_TEAM = G2URY8A8L9;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = FYRtcEngineKitDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
