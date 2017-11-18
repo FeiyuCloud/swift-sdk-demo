@@ -33,3 +33,10 @@ let engineKit = FYRtcEngineKit.sharedEngine(withAppId: "59DD**********E58A", app
 engineKit.joinChannel("channelId", uid: nil, optionData: nil, joinSuccess: nil)
 ```
 现在可以一对一或者一对多进行语音聊天了！
+#### 4. 参考文档
+[http://gitbook.feiyucloud.com/tong-xin-api-objective-c.html](http://gitbook.feiyucloud.com/tong-xin-api-objective-c.html)
+[http://gitbook.feiyucloud.com/tong-xin-api-objective-c/duo-ren-yu-yin.html](http://gitbook.feiyucloud.com/tong-xin-api-objective-c/duo-ren-yu-yin.html)
+[http://gitbook.feiyucloud.com/tong-xin-api-objective-c/dian-dao-dian-yu-yin.html](http://gitbook.feiyucloud.com/tong-xin-api-objective-c/dian-dao-dian-yu-yin.html)
+[http://www.jianshu.com/p/48f213c25e4c](http://www.jianshu.com/p/48f213c25e4c)
+[http://gitbook.feiyucloud.com/tong-xin-api-objective-c/api.html](http://gitbook.feiyucloud.com/tong-xin-api-objective-c/api.html)
+[https://github.com/crifan/feiyuiOSDemo](https://github.com/crifan/feiyuiOSDemo)
