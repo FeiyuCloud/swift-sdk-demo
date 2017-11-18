@@ -266,15 +266,21 @@ typedef NS_ENUM(NSInteger, FYRtcErrorCode) {
  *
  *  @param enable YES: Mutes other received audio. NO: Unmutes other received audio.
  */
-- (void)muteOtherRemoteAudio:(BOOL)enable Uid:(NSString *)uid;
+- (void)muteOtherAudio:(BOOL)enable Uid:(NSString *)uid;
 
 /**
- *  Mutes / Unmutes all remote audio.
+ *  Mutes / Unmutes audio with uid.
  *
  *  @param enable YES: Mutes all remote received audio. NO: Unmutes all remote received audio.
  */
-- (void)muteRemoteAudio:(BOOL)enable Uid:(NSString *)uid;
-- (void)muteAllRemoteAudio:(BOOL)enable;
+- (void)muteAudio:(BOOL)enable Uid:(NSString *)uid;
+
+/**
+ *  Mutes / Unmutes all audio.
+ *
+ *  @param enable YES: Mutes all remote received audio. NO: Unmutes all remote received audio.
+ */
+- (void)muteAllAudio:(BOOL)enable;
 
 /**
  * Mutes / Unmutes local audio.
