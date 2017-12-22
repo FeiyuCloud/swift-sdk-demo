@@ -1,5 +1,5 @@
-# objc-sdk-demo
-Feiyu Cloud Objective-C SDK Demo
+# Swift-sdk-demo
+Feiyu Cloud Swift SDK Demo
 #
 iOS集成指南
 

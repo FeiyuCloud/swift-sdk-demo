@@ -25,7 +25,7 @@ class JoinChannelViewController: UIViewController,FYRtcEngineKitDelegate {
     }
     @IBAction func speakerBtnEvent(_ sender: UIButton) {
         sender.isSelected = !sender.isSelected
-        fyRtcEngine.enabledSpeaker( sender.isSelected)
+        fyRtcEngine.enableSpeaker( sender.isSelected)
     }
     @IBAction func muteBtnEvent(_ sender: UIButton) {
         sender.isSelected = !sender.isSelected

@@ -15,6 +15,7 @@ typedef NS_ENUM(NSInteger, FYRtcErrorCode) {
     FeiyuRtc_Error_Microphone_Authority = 200003,
     FeiyuRtc_Error_Call_Current_Status_Is_InAvailable = 200004,
     FeiyuRtc_Error_JionChannel = 200005,
+    FeiyuRtc_Error_ChannelMonitor = 200006,
     
     FeiyuRtc_Error_Call_CalleePrepare = 200101,
     FeiyuRtc_Error_Call_Failed = 200102,
@@ -28,21 +29,24 @@ typedef NS_ENUM(NSInteger, FYRtcErrorCode) {
     FeiyuRtc_Error_Call_NotNetwork_Exception = 200110,
     FeiyuRtc_Error_Call_CalleeNotfound = 200111,
     FeiyuRtc_Error_Call_RequestTimeout = 200112,
-    FeiyuRtc_Error_Call_RequestTerminated = 200113,
+    FeiyuRtc_Error_Call_ReaquestTerminated = 200113,
     FeiyuRtc_Error_Call_IntervalTooBrief = 200114,
+    FeiyuRtc_Error_Call_CalleeAndCallerTheSame = 200115,
+    
+    FeiyuRtc_Error_Kick_KickError = 200116,
+    FeiyuRtc_Error_Invite_NotConnected = 200117,
 };
 
-
-
 @interface FYError :NSObject
-@property (assign ,nonatomic) NSInteger code;
-@property (copy ,nonatomic) NSString *msg;
+@property (nonatomic, assign) NSInteger code;
+@property (nonatomic, copy)   NSString *msg;
+@property (nonatomic, strong) id data;
 @end
 
 @interface FYOptionData :NSObject
-@property (nonatomic, assign)   BOOL isRecord;  //enable record function
-@property (nonatomic, assign)   int maxDuration; //maximum number of minutes
-@property (nonatomic, assign)   NSString *extraData; //transparent data
+@property (nonatomic, assign) BOOL isRecord;  //enable record function
+@property (nonatomic, assign) int maxDuration; //maximum number of minutes
+@property (nonatomic, copy)   NSString *extraData; //transparent data
 @end
 
 @interface FYRtcEngineStatus :NSObject
@@ -52,7 +56,6 @@ typedef NS_ENUM(NSInteger, FYRtcErrorCode) {
 @property (nonatomic ,assign) float recvLossRate;  //receive loss rate
 @property (nonatomic ,assign) float sendBytes;     //send bytes
 @property (nonatomic ,assign) float recvBytes;     //receive bytes
-
 @end
 
 @class FYRtcEngineKit;
@@ -81,7 +84,7 @@ typedef NS_ENUM(NSInteger, FYRtcErrorCode) {
  *
  * @param engine     FYRtcEngineKit
  *
- * @param channelId  channelId
+ * @param channelId  channel Id
  *
  * @param status     FYRtcEngineStatus
  */
@@ -180,7 +183,6 @@ typedef NS_ENUM(NSInteger, FYRtcErrorCode) {
  * @param engine  FYRtcEngineKit
  */
 - (void)onFYRtcEngineDialBackSuccess:(FYRtcEngineKit *)engine;
-
 @end
 
 @interface FYRtcEngineKit : NSObject
@@ -188,7 +190,7 @@ typedef NS_ENUM(NSInteger, FYRtcErrorCode) {
  * Init FYRtcEngineKit.
  *
  * @param appId     The appId is issued to the application developers by Feiyu Cloud.
- 
+ *
  * @param appToken  The appToken is issued to the application developers by Feiyu Cloud.
  *
  * @param delegate  FYRtcEngineKitDelegate
@@ -199,13 +201,13 @@ typedef NS_ENUM(NSInteger, FYRtcErrorCode) {
 
 /**
  * Create an open UDP socket to the FYRtcEngineKit cloud service to join a channel.
- Users in the same channel can talk to each other with same appId.
- Users using different appID cannot call each other.
+ * Users in the same channel can talk to each other with same appId.
+ * Users using different appID cannot call each other.
  *
  * @param channelId  Joining in the same channel indicates those clients have entered in one room.
  *
  * @param uid        Optional, this argument is the unique ID for each member in one channel.
- If not specified, set to nil, the SDK automatically allocates an ID, and the id could be gotten in join Channel success call back.
+ * If not specified, set to nil, the SDK automatically allocates an ID, and the id could be gotten in join Channel success call back.
  *
  * @param optionData      Add optional options (isRecord/maxDuration/extraData)
  */
@@ -218,7 +220,7 @@ typedef NS_ENUM(NSInteger, FYRtcErrorCode) {
  * @param calleeNumber    callee's phone number. the format is PSTN E164. eg. Chinese number: +86136********
  *
  * @param uid             Optional, this argument is the unique ID for caller in a call.
- If not specified, set to nil, the SDK automatically allocates an ID, and the id could be gotten in outgoingCall or callConnect event.
+ * If not specified, set to nil, the SDK automatically allocates an ID, and the id could be gotten in outgoingCall or callConnect event.
  *
  * @param display         display number. the format is PSTN E164. eg. Chinese number: +86136********
  *
@@ -228,12 +230,12 @@ typedef NS_ENUM(NSInteger, FYRtcErrorCode) {
 
 /**
  * Create an open UDP socket to the FYRtcEngineKit cloud service to call remote FYRtcEngineKit cloud client.
- Users using different appId cannot call each other.
+ * Users using different appId cannot call each other.
  *
  * @param calleeUid    callee's user id
  *
  * @param uid          Optional, this argument is the unique ID for caller in a call.
- If not specified, or set to nil, the SDK automatically allocates an ID, and the id could be gotten in outgoingCall or callConnect
+ * If not specified, or set to nil, the SDK automatically allocates an ID, and the id could be gotten in outgoingCall or callConnect
  *
  * @param optionData      Add optional options (isRecord/maxDuration/extraData)
  */
@@ -262,25 +264,31 @@ typedef NS_ENUM(NSInteger, FYRtcErrorCode) {
 - (void)calleePrepare:(NSString *)calleeUid prepareSuccess:(void(^)(void))prepareBlock;
 
 /**
- *  Mutes / Unmutes other remote audio without uid
+ * Mutes / Unmutes other remote audio without uid
  *
- *  @param enable YES: Mutes other received audio. NO: Unmutes other received audio.
+ * @param enable YES: Mutes other received audio. NO: Unmutes other received audio.
+ *
+ * @param channelId Channel Id
  */
-- (void)muteOtherAudio:(BOOL)enable Uid:(NSString *)uid;
+- (void)muteOtherAudio:(BOOL)enable Uid:(NSString *)uid ChannelId:(NSString *)channelId;
 
 /**
- *  Mutes / Unmutes audio with uid.
+ * Mutes / Unmutes audio with uid.
  *
- *  @param enable YES: Mutes all remote received audio. NO: Unmutes all remote received audio.
+ * @param enable YES: Mutes all remote received audio. NO: Unmutes all remote received audio.
+ *
+ * @param channelId Channel Id
  */
-- (void)muteAudio:(BOOL)enable Uid:(NSString *)uid;
+- (void)muteAudio:(BOOL)enable Uid:(NSString *)uid ChannelId:(NSString *)channelId;
 
 /**
- *  Mutes / Unmutes all audio.
+ * Mutes / Unmutes all audio.
  *
- *  @param enable YES: Mutes all remote received audio. NO: Unmutes all remote received audio.
+ * @param enable YES: Mutes all remote received audio. NO: Unmutes all remote received audio.
+ *
+ * @param channelId Channel Id
  */
-- (void)muteAllAudio:(BOOL)enable;
+- (void)muteAllAudio:(BOOL)enable ChannelId:(NSString *)channelId;
 
 /**
  * Mutes / Unmutes local audio.
@@ -290,24 +298,24 @@ typedef NS_ENUM(NSInteger, FYRtcErrorCode) {
 - (void)muteLocalAudio:(BOOL)enable;
 
 /**
- *  Enable / Disable speaker of device
+ * Enable / Disable speaker of device
  *
- *  @param enable YES: Switches to speakerphone. NO: Switches to headset.
+ * @param enable YES: Switches to speakerphone. NO: Switches to headset.
  */
-- (void)enabledSpeaker:(BOOL)enable;
+- (void)enableSpeaker:(BOOL)enable;
 
 /**
- *  lets the user leave a channel, i.e., hanging up or exiting a call.
- After joining a channel, the user must call the leaveChannel method to end the call before joining another one.
+ * lets the user leave a channel, i.e., hanging up or exiting a call.
+ * After joining a channel, the user must call the leaveChannel method to end the call before joining another one.
  *
- *  @param leaveChannelBlock  The statistics of the call, including duration, sent bytes and received bytes
+ * @param leaveChannelBlock  The statistics of the call, including duration, sent bytes and received bytes
  */
 - (void)leaveChannel:(void(^)(FYRtcEngineStatus* stat))leaveChannelBlock;
 
 /**
- *  hanging up or exiting a call.
+ * hanging up or exiting a call.
  *
- *  @param endBlock  The statistics of the call, including duration, sent bytes and received bytes
+ * @param endBlock  The statistics of the call, including duration, sent bytes and received bytes
  */
 - (void)endCall:(void(^)(FYRtcEngineStatus* stat))endBlock;
 
@@ -333,16 +341,17 @@ typedef NS_ENUM(NSInteger, FYRtcErrorCode) {
 - (void)setRing:(NSString *)path;
 
 /**
- *  Specifies the SDK output log file.
+ * Specifies the SDK output log file.
  *
- *  @param path The full file path of the log file.
+ * @param path The full file path of the log file.
  */
 - (void)setLogfile:(NSString *)path;
 
 /**
- *  Get the version of Feiyu cloud.
+ * Get the version of Feiyu cloud.
  *
- *  @return string, sdk version
+ * @return string, sdk version
  */
 - (NSString *)version;
+
 @end
