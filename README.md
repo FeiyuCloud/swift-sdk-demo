@@ -38,7 +38,7 @@ rtcEngine.joinChannel(channelId, uid: userId, option: nil)
 | ---- | :---- | :---- |
 | channelId | 是 | 频道id，字符串，数字，\_，长度不超过40位 |
 | uid | 否 | 用户id，为空时sdk会生成一个uid |
-| option | 否 | 选项，可以配置最大时长，是否录音和偷传数据 |
+| option | 否 | 选项，可以配置最大时长，是否录音和透传数据 |
 
 <br/>
 
