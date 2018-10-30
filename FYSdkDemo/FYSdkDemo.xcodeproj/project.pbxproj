@@ -1,0 +1,565 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		25B031822186D864000DFB25 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B031812186D864000DFB25 /* AppDelegate.swift */; };
+		25B031842186D864000DFB25 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B031832186D864000DFB25 /* MainViewController.swift */; };
+		25B031892186D866000DFB25 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 25B031882186D866000DFB25 /* Assets.xcassets */; };
+		25B0318C2186D866000DFB25 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25B0318A2186D866000DFB25 /* LaunchScreen.storyboard */; };
+		25B031942186DBE1000DFB25 /* MyProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B031932186DBE1000DFB25 /* MyProgressHUD.swift */; };
+		25B031982186F748000DFB25 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B031972186F748000DFB25 /* Utils.swift */; };
+		25B0319A2186FBA2000DFB25 /* TestChannelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B031992186FBA2000DFB25 /* TestChannelViewController.swift */; };
+		25B0319C2186FBBA000DFB25 /* TestVoIPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B0319B2186FBBA000DFB25 /* TestVoIPViewController.swift */; };
+		25B0319E218700FB000DFB25 /* AppCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B0319D218700FB000DFB25 /* AppCall.swift */; };
+		25B031A6218702D1000DFB25 /* ring.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 25B031A5218702D1000DFB25 /* ring.m4a */; };
+		25B031B4218709F6000DFB25 /* ChannelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B031B3218709F6000DFB25 /* ChannelViewController.swift */; };
+		25B031B621870B8D000DFB25 /* UIColorExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B031B521870B8D000DFB25 /* UIColorExt.swift */; };
+		25B031C721871511000DFB25 /* call_end_nor@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 25B031B721871510000DFB25 /* call_end_nor@3x.png */; };
+		25B031C821871511000DFB25 /* call_mute_nor@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 25B031B821871510000DFB25 /* call_mute_nor@3x.png */; };
+		25B031C921871511000DFB25 /* call_answer_pre@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 25B031B921871511000DFB25 /* call_answer_pre@3x.png */; };
+		25B031CA21871511000DFB25 /* call_mute_pre@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 25B031BA21871511000DFB25 /* call_mute_pre@2x.png */; };
+		25B031CB21871511000DFB25 /* call_end_nor@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 25B031BB21871511000DFB25 /* call_end_nor@2x.png */; };
+		25B031CC21871511000DFB25 /* call_answer_pre@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 25B031BC21871511000DFB25 /* call_answer_pre@2x.png */; };
+		25B031CD21871511000DFB25 /* call_speaker_nor@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 25B031BD21871511000DFB25 /* call_speaker_nor@2x.png */; };
+		25B031CE21871511000DFB25 /* call_end_pre@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 25B031BE21871511000DFB25 /* call_end_pre@3x.png */; };
+		25B031CF21871511000DFB25 /* call_answer_nor@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 25B031BF21871511000DFB25 /* call_answer_nor@2x.png */; };
+		25B031D021871511000DFB25 /* call_speaker_nor@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 25B031C021871511000DFB25 /* call_speaker_nor@3x.png */; };
+		25B031D121871511000DFB25 /* call_speaker_pre@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 25B031C121871511000DFB25 /* call_speaker_pre@2x.png */; };
+		25B031D221871511000DFB25 /* call_answer_nor@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 25B031C221871511000DFB25 /* call_answer_nor@3x.png */; };
+		25B031D321871511000DFB25 /* call_speaker_pre@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 25B031C321871511000DFB25 /* call_speaker_pre@3x.png */; };
+		25B031D421871511000DFB25 /* call_mute_nor@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 25B031C421871511000DFB25 /* call_mute_nor@2x.png */; };
+		25B031D521871511000DFB25 /* call_mute_pre@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 25B031C521871511000DFB25 /* call_mute_pre@3x.png */; };
+		25B031D621871511000DFB25 /* call_end_pre@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 25B031C621871511000DFB25 /* call_end_pre@2x.png */; };
+		25B031D821871625000DFB25 /* CallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B031D721871625000DFB25 /* CallViewController.swift */; };
+		25B031D921874A20000DFB25 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 25B031B1218707F2000DFB25 /* libsqlite3.tbd */; };
+		25B031DA21874A38000DFB25 /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 25B031AB218707C4000DFB25 /* libxml2.tbd */; };
+		25B031DB21874A4E000DFB25 /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 25B031A9218707B8000DFB25 /* libiconv.tbd */; };
+		25B031DD21874AF4000DFB25 /* libresolv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 25B031AF218707E5000DFB25 /* libresolv.tbd */; };
+		25B031DE21874B0B000DFB25 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 25B031AD218707D5000DFB25 /* libz.tbd */; };
+		25B031DF21874B26000DFB25 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 25B031A72187079F000DFB25 /* libc++.tbd */; };
+		25B031E621874BCC000DFB25 /* libFyCloud.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 25B031E521874BCC000DFB25 /* libFyCloud.a */; };
+		C4668DFD399743EC0ECCFEC1 /* Pods_FYSdkDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F196079D1ECF984D83CAF8A /* Pods_FYSdkDemo.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		25B0317E2186D864000DFB25 /* FYSdkDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FYSdkDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		25B031812186D864000DFB25 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		25B031832186D864000DFB25 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		25B031882186D866000DFB25 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		25B0318B2186D866000DFB25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		25B0318D2186D866000DFB25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		25B031932186DBE1000DFB25 /* MyProgressHUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProgressHUD.swift; sourceTree = "<group>"; };
+		25B031972186F748000DFB25 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		25B031992186FBA2000DFB25 /* TestChannelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestChannelViewController.swift; sourceTree = "<group>"; };
+		25B0319B2186FBBA000DFB25 /* TestVoIPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestVoIPViewController.swift; sourceTree = "<group>"; };
+		25B0319D218700FB000DFB25 /* AppCall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCall.swift; sourceTree = "<group>"; };
+		25B031A32187016E000DFB25 /* FYSdkDemo_Bridging_Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FYSdkDemo_Bridging_Header.h; sourceTree = "<group>"; };
+		25B031A5218702D1000DFB25 /* ring.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = ring.m4a; sourceTree = "<group>"; };
+		25B031A72187079F000DFB25 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		25B031A9218707B8000DFB25 /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
+		25B031AB218707C4000DFB25 /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
+		25B031AD218707D5000DFB25 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		25B031AF218707E5000DFB25 /* libresolv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.tbd; path = usr/lib/libresolv.tbd; sourceTree = SDKROOT; };
+		25B031B1218707F2000DFB25 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		25B031B3218709F6000DFB25 /* ChannelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelViewController.swift; sourceTree = "<group>"; };
+		25B031B521870B8D000DFB25 /* UIColorExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExt.swift; sourceTree = "<group>"; };
+		25B031B721871510000DFB25 /* call_end_nor@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "call_end_nor@3x.png"; sourceTree = "<group>"; };
+		25B031B821871510000DFB25 /* call_mute_nor@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "call_mute_nor@3x.png"; sourceTree = "<group>"; };
+		25B031B921871511000DFB25 /* call_answer_pre@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "call_answer_pre@3x.png"; sourceTree = "<group>"; };
+		25B031BA21871511000DFB25 /* call_mute_pre@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "call_mute_pre@2x.png"; sourceTree = "<group>"; };
+		25B031BB21871511000DFB25 /* call_end_nor@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "call_end_nor@2x.png"; sourceTree = "<group>"; };
+		25B031BC21871511000DFB25 /* call_answer_pre@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "call_answer_pre@2x.png"; sourceTree = "<group>"; };
+		25B031BD21871511000DFB25 /* call_speaker_nor@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "call_speaker_nor@2x.png"; sourceTree = "<group>"; };
+		25B031BE21871511000DFB25 /* call_end_pre@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "call_end_pre@3x.png"; sourceTree = "<group>"; };
+		25B031BF21871511000DFB25 /* call_answer_nor@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "call_answer_nor@2x.png"; sourceTree = "<group>"; };
+		25B031C021871511000DFB25 /* call_speaker_nor@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "call_speaker_nor@3x.png"; sourceTree = "<group>"; };
+		25B031C121871511000DFB25 /* call_speaker_pre@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "call_speaker_pre@2x.png"; sourceTree = "<group>"; };
+		25B031C221871511000DFB25 /* call_answer_nor@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "call_answer_nor@3x.png"; sourceTree = "<group>"; };
+		25B031C321871511000DFB25 /* call_speaker_pre@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "call_speaker_pre@3x.png"; sourceTree = "<group>"; };
+		25B031C421871511000DFB25 /* call_mute_nor@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "call_mute_nor@2x.png"; sourceTree = "<group>"; };
+		25B031C521871511000DFB25 /* call_mute_pre@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "call_mute_pre@3x.png"; sourceTree = "<group>"; };
+		25B031C621871511000DFB25 /* call_end_pre@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "call_end_pre@2x.png"; sourceTree = "<group>"; };
+		25B031D721871625000DFB25 /* CallViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallViewController.swift; sourceTree = "<group>"; };
+		25B031E421874BCB000DFB25 /* FYRtcEngineKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FYRtcEngineKit.h; sourceTree = "<group>"; };
+		25B031E521874BCC000DFB25 /* libFyCloud.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libFyCloud.a; sourceTree = "<group>"; };
+		9F196079D1ECF984D83CAF8A /* Pods_FYSdkDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FYSdkDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD58B0680E1258D950ABB5ED /* Pods-FYSdkDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FYSdkDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FYSdkDemo/Pods-FYSdkDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		F69A7E07246EEB95DF28274F /* Pods-FYSdkDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FYSdkDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-FYSdkDemo/Pods-FYSdkDemo.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		25B0317B2186D864000DFB25 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				25B031DF21874B26000DFB25 /* libc++.tbd in Frameworks */,
+				25B031DE21874B0B000DFB25 /* libz.tbd in Frameworks */,
+				25B031DD21874AF4000DFB25 /* libresolv.tbd in Frameworks */,
+				25B031DB21874A4E000DFB25 /* libiconv.tbd in Frameworks */,
+				25B031DA21874A38000DFB25 /* libxml2.tbd in Frameworks */,
+				25B031D921874A20000DFB25 /* libsqlite3.tbd in Frameworks */,
+				25B031E621874BCC000DFB25 /* libFyCloud.a in Frameworks */,
+				C4668DFD399743EC0ECCFEC1 /* Pods_FYSdkDemo.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		25B031752186D864000DFB25 = {
+			isa = PBXGroup;
+			children = (
+				25B031E021874B83000DFB25 /* FeiyuSDK */,
+				25B031A4218702B0000DFB25 /* Resource */,
+				25B031802186D864000DFB25 /* FYSdkDemo */,
+				25B0317F2186D864000DFB25 /* Products */,
+				B8746C16B817AF154613FD8E /* Pods */,
+				71F05B1C9FE16BE208FBAA13 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		25B0317F2186D864000DFB25 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				25B0317E2186D864000DFB25 /* FYSdkDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		25B031802186D864000DFB25 /* FYSdkDemo */ = {
+			isa = PBXGroup;
+			children = (
+				25B0319D218700FB000DFB25 /* AppCall.swift */,
+				25B031812186D864000DFB25 /* AppDelegate.swift */,
+				25B031832186D864000DFB25 /* MainViewController.swift */,
+				25B031992186FBA2000DFB25 /* TestChannelViewController.swift */,
+				25B0319B2186FBBA000DFB25 /* TestVoIPViewController.swift */,
+				25B031B3218709F6000DFB25 /* ChannelViewController.swift */,
+				25B031D721871625000DFB25 /* CallViewController.swift */,
+				25B031972186F748000DFB25 /* Utils.swift */,
+				25B031B521870B8D000DFB25 /* UIColorExt.swift */,
+				25B031932186DBE1000DFB25 /* MyProgressHUD.swift */,
+				25B031A32187016E000DFB25 /* FYSdkDemo_Bridging_Header.h */,
+				25B0318A2186D866000DFB25 /* LaunchScreen.storyboard */,
+				25B0318D2186D866000DFB25 /* Info.plist */,
+				25B031882186D866000DFB25 /* Assets.xcassets */,
+			);
+			path = FYSdkDemo;
+			sourceTree = "<group>";
+		};
+		25B031A4218702B0000DFB25 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				25B031BF21871511000DFB25 /* call_answer_nor@2x.png */,
+				25B031C221871511000DFB25 /* call_answer_nor@3x.png */,
+				25B031BC21871511000DFB25 /* call_answer_pre@2x.png */,
+				25B031B921871511000DFB25 /* call_answer_pre@3x.png */,
+				25B031BB21871511000DFB25 /* call_end_nor@2x.png */,
+				25B031B721871510000DFB25 /* call_end_nor@3x.png */,
+				25B031C621871511000DFB25 /* call_end_pre@2x.png */,
+				25B031BE21871511000DFB25 /* call_end_pre@3x.png */,
+				25B031C421871511000DFB25 /* call_mute_nor@2x.png */,
+				25B031B821871510000DFB25 /* call_mute_nor@3x.png */,
+				25B031BA21871511000DFB25 /* call_mute_pre@2x.png */,
+				25B031C521871511000DFB25 /* call_mute_pre@3x.png */,
+				25B031BD21871511000DFB25 /* call_speaker_nor@2x.png */,
+				25B031C021871511000DFB25 /* call_speaker_nor@3x.png */,
+				25B031C121871511000DFB25 /* call_speaker_pre@2x.png */,
+				25B031C321871511000DFB25 /* call_speaker_pre@3x.png */,
+				25B031A5218702D1000DFB25 /* ring.m4a */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		25B031E021874B83000DFB25 /* FeiyuSDK */ = {
+			isa = PBXGroup;
+			children = (
+				25B031E421874BCB000DFB25 /* FYRtcEngineKit.h */,
+				25B031E521874BCC000DFB25 /* libFyCloud.a */,
+			);
+			path = FeiyuSDK;
+			sourceTree = "<group>";
+		};
+		71F05B1C9FE16BE208FBAA13 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				25B031B1218707F2000DFB25 /* libsqlite3.tbd */,
+				25B031AF218707E5000DFB25 /* libresolv.tbd */,
+				25B031AD218707D5000DFB25 /* libz.tbd */,
+				25B031AB218707C4000DFB25 /* libxml2.tbd */,
+				25B031A9218707B8000DFB25 /* libiconv.tbd */,
+				25B031A72187079F000DFB25 /* libc++.tbd */,
+				9F196079D1ECF984D83CAF8A /* Pods_FYSdkDemo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B8746C16B817AF154613FD8E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CD58B0680E1258D950ABB5ED /* Pods-FYSdkDemo.debug.xcconfig */,
+				F69A7E07246EEB95DF28274F /* Pods-FYSdkDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		25B0317D2186D864000DFB25 /* FYSdkDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 25B031902186D866000DFB25 /* Build configuration list for PBXNativeTarget "FYSdkDemo" */;
+			buildPhases = (
+				4730FAAABFCBF56E892F2466 /* [CP] Check Pods Manifest.lock */,
+				25B0317A2186D864000DFB25 /* Sources */,
+				25B0317B2186D864000DFB25 /* Frameworks */,
+				25B0317C2186D864000DFB25 /* Resources */,
+				7864AFA8444ED32051966B7B /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FYSdkDemo;
+			productName = FYSdkDemo;
+			productReference = 25B0317E2186D864000DFB25 /* FYSdkDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		25B031762186D864000DFB25 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1000;
+				LastUpgradeCheck = 1000;
+				ORGANIZATIONNAME = feiyucloud;
+				TargetAttributes = {
+					25B0317D2186D864000DFB25 = {
+						CreatedOnToolsVersion = 10.0;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = 25B031792186D864000DFB25 /* Build configuration list for PBXProject "FYSdkDemo" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 25B031752186D864000DFB25;
+			productRefGroup = 25B0317F2186D864000DFB25 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				25B0317D2186D864000DFB25 /* FYSdkDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		25B0317C2186D864000DFB25 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				25B031CE21871511000DFB25 /* call_end_pre@3x.png in Resources */,
+				25B031D321871511000DFB25 /* call_speaker_pre@3x.png in Resources */,
+				25B031D521871511000DFB25 /* call_mute_pre@3x.png in Resources */,
+				25B031CB21871511000DFB25 /* call_end_nor@2x.png in Resources */,
+				25B031D421871511000DFB25 /* call_mute_nor@2x.png in Resources */,
+				25B031CA21871511000DFB25 /* call_mute_pre@2x.png in Resources */,
+				25B031D621871511000DFB25 /* call_end_pre@2x.png in Resources */,
+				25B031CD21871511000DFB25 /* call_speaker_nor@2x.png in Resources */,
+				25B031D021871511000DFB25 /* call_speaker_nor@3x.png in Resources */,
+				25B031D221871511000DFB25 /* call_answer_nor@3x.png in Resources */,
+				25B031CF21871511000DFB25 /* call_answer_nor@2x.png in Resources */,
+				25B0318C2186D866000DFB25 /* LaunchScreen.storyboard in Resources */,
+				25B031C921871511000DFB25 /* call_answer_pre@3x.png in Resources */,
+				25B031C721871511000DFB25 /* call_end_nor@3x.png in Resources */,
+				25B031A6218702D1000DFB25 /* ring.m4a in Resources */,
+				25B031D121871511000DFB25 /* call_speaker_pre@2x.png in Resources */,
+				25B031CC21871511000DFB25 /* call_answer_pre@2x.png in Resources */,
+				25B031C821871511000DFB25 /* call_mute_nor@3x.png in Resources */,
+				25B031892186D866000DFB25 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4730FAAABFCBF56E892F2466 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FYSdkDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7864AFA8444ED32051966B7B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-FYSdkDemo/Pods-FYSdkDemo-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FYSdkDemo/Pods-FYSdkDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		25B0317A2186D864000DFB25 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				25B0319A2186FBA2000DFB25 /* TestChannelViewController.swift in Sources */,
+				25B031842186D864000DFB25 /* MainViewController.swift in Sources */,
+				25B0319C2186FBBA000DFB25 /* TestVoIPViewController.swift in Sources */,
+				25B031942186DBE1000DFB25 /* MyProgressHUD.swift in Sources */,
+				25B031B621870B8D000DFB25 /* UIColorExt.swift in Sources */,
+				25B031822186D864000DFB25 /* AppDelegate.swift in Sources */,
+				25B0319E218700FB000DFB25 /* AppCall.swift in Sources */,
+				25B031B4218709F6000DFB25 /* ChannelViewController.swift in Sources */,
+				25B031D821871625000DFB25 /* CallViewController.swift in Sources */,
+				25B031982186F748000DFB25 /* Utils.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		25B0318A2186D866000DFB25 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				25B0318B2186D866000DFB25 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		25B0318E2186D866000DFB25 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		25B0318F2186D866000DFB25 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		25B031912186D866000DFB25 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CD58B0680E1258D950ABB5ED /* Pods-FYSdkDemo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G2URY8A8L9;
+				INFOPLIST_FILE = FYSdkDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/FeiyuSDK",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.feiyucloud.open.FYSdkDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_NAME)/FYSdkDemo_Bridging_Header.h";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		25B031922186D866000DFB25 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F69A7E07246EEB95DF28274F /* Pods-FYSdkDemo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G2URY8A8L9;
+				INFOPLIST_FILE = FYSdkDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/FeiyuSDK",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.feiyucloud.open.FYSdkDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_NAME)/FYSdkDemo_Bridging_Header.h";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		25B031792186D864000DFB25 /* Build configuration list for PBXProject "FYSdkDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				25B0318E2186D866000DFB25 /* Debug */,
+				25B0318F2186D866000DFB25 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		25B031902186D866000DFB25 /* Build configuration list for PBXNativeTarget "FYSdkDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				25B031912186D866000DFB25 /* Debug */,
+				25B031922186D866000DFB25 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 25B031762186D864000DFB25 /* Project object */;
+}
