@@ -102,7 +102,7 @@ class CallViewController: UIViewController, FYRtcEngineKitDelegate {
             self.view.addSubview(answerCallBtn!)
             answerCallBtn?.snp.makeConstraints { (make) in
                 make.left.equalTo(self.view.snp.centerX).offset(30)
-                make.bottom.equalTo(self.view).offset(-marginBottom)
+                make.centerY.equalTo(self.endCallBtn)
             }
         } else {
             endCallBtn.snp.makeConstraints { (make) in
@@ -157,7 +157,11 @@ class CallViewController: UIViewController, FYRtcEngineKitDelegate {
         answerCallBtn?.removeFromSuperview()
         endCallBtn.snp.remakeConstraints { (make) in
             make.centerX.equalTo(self.view)
-            make.bottom.equalTo(self.view).offset(-marginBottom)
+            if #available(iOS 11.0, *) {
+                make.bottom.equalTo(self.view.safeAreaLayoutGuide).offset(-marginBottom)
+            } else {
+                make.bottom.equalTo(self.view).offset(-marginBottom)
+            }
         }
         
         AppCall.shared.getRtcEngine().answerCall()
