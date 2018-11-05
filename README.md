@@ -17,21 +17,23 @@
 - 创建FYRtcEngine：
 
 ```swift
-let rtcEngine = FYRtcEngineKit.sharedEngine(withAppId: "YourAppId", appToken: "YourAppToken", delegate: this)
++ (instancetype)sharedEngineWithAppId:(NSString *)appId
+                             appToken:(NSString *)appToken
+                             delegate:(id<FYRtcEngineKitDelegate>)delegate;
 ```
 
 | 参数 | 是否必须 | 描述 |
 | ---- | :---- | :---- |
 | appId | 是 | 应用id |
 | appToken | 是 | 应用token |
-| FYRtcEngineKitDelegate | 否 | 提供FYRtcEngineKit所有事件回调 |
+| delegate | 否 | 提供FYRtcEngineKit所有事件回调 |
 
 <br/>
 
 - 加入频道：
 
 ```swift
-rtcEngine.joinChannel(channelId, uid: userId, option: nil)
+- (void)joinChannel:(NSString *)channelId uid:(NSString *)uid option:(FYOptionData *)option;
 ```
 
 | 参数 | 是否必须 | 描述 |
@@ -45,21 +47,21 @@ rtcEngine.joinChannel(channelId, uid: userId, option: nil)
 - 点到点语音：
 
 ```swift
-rtcEngine.dialPeer(calleeUid, callerUid: callerUid, option: nil)
+- (void)dialPeer:(NSString *)calleeUid callerUid:(NSString *)callerUid option:(FYOptionData *)option;
 ```
 
 | 参数 | 是否必须 | 描述 |
 | --- | --- | --- |
 | calleeUid | 是 | 被叫用户id |
 | callerUid | 否 | 主叫用户id，为空时sdk会生成一个uid |
-| option | 否 | 呼叫选项，可配置最大时长，是否录音，透传数据 |
+| option | 否 | 选项，可配置最大时长，是否录音和透传数据 |
 
 <br/>
 
 - 准备接听点到点来电：
 
 ```swift
-rtcEngine.calleePrepare(uid)
+- (void)calleePrepare:(NSString *)uid;
 ```
 | 参数 | 是否必须 | 描述 |
 | --- | --- | --- |
