@@ -29,8 +29,8 @@ class CallViewController: UIViewController, FYRtcEngineKitDelegate {
     private var duration: Int = 0
     private var countdownTimer: Timer?
     
-    private let marginTop: CGFloat = 60
-    private let marginBottom: CGFloat = 60
+    private let marginTop: CGFloat = 50
+    private let marginBottom: CGFloat = 30
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
@@ -107,7 +107,11 @@ class CallViewController: UIViewController, FYRtcEngineKitDelegate {
         } else {
             endCallBtn.snp.makeConstraints { (make) in
                 make.centerX.equalTo(self.view)
-                make.bottom.equalTo(self.view).offset(-marginBottom)
+                if #available(iOS 11.0, *) {
+                    make.bottom.equalTo(self.view.safeAreaLayoutGuide).offset(-marginBottom)
+                } else {
+                    make.bottom.equalTo(self.view).offset(-marginBottom)
+                }
             }
         }
         
