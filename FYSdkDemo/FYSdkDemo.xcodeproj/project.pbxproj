@@ -42,7 +42,7 @@
 		25B031DD21874AF4000DFB25 /* libresolv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 25B031AF218707E5000DFB25 /* libresolv.tbd */; };
 		25B031DE21874B0B000DFB25 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 25B031AD218707D5000DFB25 /* libz.tbd */; };
 		25B031DF21874B26000DFB25 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 25B031A72187079F000DFB25 /* libc++.tbd */; };
-		25B031E621874BCC000DFB25 /* libFyCloud.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 25B031E521874BCC000DFB25 /* libFyCloud.a */; };
+		25C8453C2192863C0093C2AC /* libFyCloud.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 25C8453B2192863C0093C2AC /* libFyCloud.a */; };
 		C4668DFD399743EC0ECCFEC1 /* Pods_FYSdkDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F196079D1ECF984D83CAF8A /* Pods_FYSdkDemo.framework */; };
 /* End PBXBuildFile section */
 
@@ -86,7 +86,7 @@
 		25B031C621871511000DFB25 /* call_end_pre@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "call_end_pre@2x.png"; sourceTree = "<group>"; };
 		25B031D721871625000DFB25 /* CallViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallViewController.swift; sourceTree = "<group>"; };
 		25B031E421874BCB000DFB25 /* FYRtcEngineKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FYRtcEngineKit.h; sourceTree = "<group>"; };
-		25B031E521874BCC000DFB25 /* libFyCloud.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libFyCloud.a; sourceTree = "<group>"; };
+		25C8453B2192863C0093C2AC /* libFyCloud.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libFyCloud.a; sourceTree = "<group>"; };
 		9F196079D1ECF984D83CAF8A /* Pods_FYSdkDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FYSdkDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD58B0680E1258D950ABB5ED /* Pods-FYSdkDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FYSdkDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FYSdkDemo/Pods-FYSdkDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		F69A7E07246EEB95DF28274F /* Pods-FYSdkDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FYSdkDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-FYSdkDemo/Pods-FYSdkDemo.release.xcconfig"; sourceTree = "<group>"; };
@@ -97,13 +97,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				25C8453C2192863C0093C2AC /* libFyCloud.a in Frameworks */,
 				25B031DF21874B26000DFB25 /* libc++.tbd in Frameworks */,
 				25B031DE21874B0B000DFB25 /* libz.tbd in Frameworks */,
 				25B031DD21874AF4000DFB25 /* libresolv.tbd in Frameworks */,
 				25B031DB21874A4E000DFB25 /* libiconv.tbd in Frameworks */,
 				25B031DA21874A38000DFB25 /* libxml2.tbd in Frameworks */,
 				25B031D921874A20000DFB25 /* libsqlite3.tbd in Frameworks */,
-				25B031E621874BCC000DFB25 /* libFyCloud.a in Frameworks */,
 				C4668DFD399743EC0ECCFEC1 /* Pods_FYSdkDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -179,8 +179,8 @@
 		25B031E021874B83000DFB25 /* FeiyuSDK */ = {
 			isa = PBXGroup;
 			children = (
+				25C8453B2192863C0093C2AC /* libFyCloud.a */,
 				25B031E421874BCB000DFB25 /* FYRtcEngineKit.h */,
-				25B031E521874BCC000DFB25 /* libFyCloud.a */,
 			);
 			path = FeiyuSDK;
 			sourceTree = "<group>";
